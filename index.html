@@ -1013,12 +1013,36 @@
                       "></select>
                 </div>
                 <button
-                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 w-full bg-gradient-to-r from-[#c69832] to-[#c69832] hover:from-[#c69832] hover:to-[#c69832] py-2"
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 w-full bg-gradient-to-r from-[#c69832] to-[#c69832] hover:from-[#c69832] hover:to-[#c69832] py-2"
                   type="submit">
                   Contact Us
                 </button>
               </form>
             </div>
+            <script>
+              // Replace with your actual EmailJS public key, service ID, and template ID
+              const EMAILJS_PUBLIC_KEY = 'oSKl3ghVdj4Zq_UeK';
+              const EMAILJS_SERVICE_ID = 'service_rs2mdeo';
+              const EMAILJS_TEMPLATE_ID = 'template_nxb84jz';
+
+              document.addEventListener('DOMContentLoaded', function () {
+                emailjs.init(EMAILJS_PUBLIC_KEY);
+
+                document.getElementById('contact-form').addEventListener('submit', function (e) {
+                  e.preventDefault();
+
+                  // Optionally, show a loading indicator here
+
+                  emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+                    .then(function () {
+                      alert('Thank you! Your inquiry has been submitted.');
+                      document.getElementById('contact-form').reset();
+                    }, function (error) {
+                      alert('Oops! Something went wrong. Please try again.');
+                    });
+                });
+              });
+            </script>
             <div class="space-y-8" style="opacity: 0; transform: translateX(20px)">
               <div class="bg-white/90 backdrop-blur-md p-8 rounded-xl shadow-lg border border-gray-100">
                 <h3 class="text-2xl font-bold mb-8 text-[#c69832] flex items-center justify-center">
@@ -1172,11 +1196,19 @@
       '8:null\nc:[["$","title","0",{"children":"Azizi Milan Dubai - Luxury Redefined"}],["$","meta","1",{"name":"description","content":"Experience luxury living at Azizi Milan in City of Arabia, Dubai\'s most prestigious location."}],["$","meta","2",{"name":"generator","content":"v0.dev"}],["$","link","3",{"rel":"icon","href":"/favicon.ico"}]]\n',
     ]);
   </script>
-  <footer class="w-full text-center py-4 text-gray-500 text-sm bg-white border-t border-gray-100">
-    All rights reserved. Powered by
-    <a href="https://badfitech.com" target="_blank" rel="noopener noreferrer"
-      class="underline hover:text-[#144A8B]">Badfi Tech</a>.
-  </footer>
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS with your public key
+    (function () {
+      emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your actual EmailJS public key
+    })();
+  </script>
 </body>
+<footer class="w-full text-center py-4 text-gray-500 text-sm bg-white border-t border-gray-100">
+  All rights reserved. Powered by
+  <a href="https://badfitech.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-[#144A8B]">Badfi
+    Tech</a>.
+</footer>
 
 </html>
