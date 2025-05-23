@@ -1010,284 +1010,196 @@
                         clip: rect(0, 0, 0, 0);
                         white-space: nowrap;
                         word-wrap: normal;
-                      "
-                    ></select>
-                  </div>
-                  <button
-                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 w-full bg-gradient-to-r from-[#c69832] to-[#c69832] hover:from-[#c69832] hover:to-[#c69832] py-2"
-                    type="submit"
-                  >
-                    Contact Us
-                  </button>
-                </form>
-              </div>
-              <div
-                class="space-y-8"
-                style="opacity: 0; transform: translateX(20px)"
-              >
-                <div
-                  class="bg-white/90 backdrop-blur-md p-8 rounded-xl shadow-lg border border-gray-100"
-                >
-                  <h3
-                    class="text-2xl font-bold mb-8 text-[#c69832] flex items-center justify-center"
-                  >
-                    <span
-                      class="bg-gradient-to-r from-[#c69832] to-[#c69832] text-white p-3 rounded-lg mr-3 shadow-md"
-                      ><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-phone"
-                      >
+                      "></select>
+                </div>
+                <button
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 w-full bg-gradient-to-r from-[#c69832] to-[#c69832] hover:from-[#c69832] hover:to-[#c69832] py-2"
+                  type="submit">
+                  Contact Us
+                </button>
+              </form>
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+            <script>
+              // Replace with your actual EmailJS public key, service ID, and template ID
+              const EMAILJS_PUBLIC_KEY = 'oSKl3ghVdj4Zq_UeK';
+              const EMAILJS_SERVICE_ID = 'service_rs2mdeo';
+              const EMAILJS_TEMPLATE_ID = 'template_nxb84jz';
+
+              document.addEventListener('DOMContentLoaded', function () {
+                emailjs.init(EMAILJS_PUBLIC_KEY);
+
+                document.getElementById('contact-form').addEventListener('submit', function (e) {
+                  e.preventDefault();
+
+                  // Optionally, show a loading indicator here
+
+                  emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+                    .then(function () {
+                      alert('Thank you! Your inquiry has been submitted.');
+                      document.getElementById('contact-form').reset();
+                    }, function (error) {
+                      alert('Oops! Something went wrong. Please try again.');
+                    });
+                });
+              });
+            </script>
+            <div class="space-y-8" style="opacity: 0; transform: translateX(20px)">
+              <div class="bg-white/90 backdrop-blur-md p-8 rounded-xl shadow-lg border border-gray-100">
+                <h3 class="text-2xl font-bold mb-8 text-[#c69832] flex items-center justify-center">
+                  <span
+                    class="bg-gradient-to-r from-[#c69832] to-[#c69832] text-white p-3 rounded-lg mr-3 shadow-md"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="lucide lucide-phone">
+                      <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                      </path>
+                    </svg></span>Contact Information
+                </h3>
+                <div class="space-y-6">
+                  <div class="flex items-center p-4 bg-blue-50 rounded-lg transition-all hover:bg-blue-100">
+                    <div class="bg-[#c69832] p-3 rounded-full text-white mr-4 shadow-sm">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-phone">
                         <path
-                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                        ></path></svg></span
-                    >Contact Information
-                  </h3>
-                  <div class="space-y-6">
-                    <div
-                      class="flex items-center p-4 bg-blue-50 rounded-lg transition-all hover:bg-blue-100"
-                    >
-                      <div
-                        class="bg-[#c69832] p-3 rounded-full text-white mr-4 shadow-sm"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-phone"
-                        >
-                          <path
-                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-                          ></path>
-                        </svg>
-                      </div>
-                      <div>
-                        <div class="text-sm text-gray-500 font-medium">
-                          Call Us
-                        </div>
-                        <a
-                          href="tel:+971552108850"
-                          class="text-[#c69832] font-bold text-lg hover:underline"
-                          >+971 55 210 8850</a
-                        >
-                        
-                      </div>
+                          d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                        </path>
+                      </svg>
                     </div>
-                    <div
-                      class="flex items-center p-4 bg-green-50 rounded-lg transition-all hover:bg-green-100"
-                    >
-                      <div
-                        class="bg-[#c69832] p-3 rounded-full text-white mr-4 shadow-sm"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          class=""
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M20.4539 3.54523C18.2266 1.31736 15.2953 0.0689087 12.1789 0.0666792C5.8066 0.0666792 0.622928 5.24935 0.620699 11.6227C0.620014 13.6827 1.15635 15.6893 2.18463 17.4493L0.52002 23.9333L7.15463 22.3013C8.84945 23.2333 10.7947 23.7267 12.7746 23.728H12.78C19.1512 23.728 24.336 18.544 24.3382 12.1707C24.3405 9.06469 23.0955 6.13202 20.8661 3.90402L20.4539 3.54523ZM12.1789 21.7227H12.1746C10.4 21.7227 8.66037 21.2493 7.14396 20.3613L6.7861 20.1547L3.2661 21.1333L4.26037 17.7067L4.03037 17.3333C3.05214 15.7587 2.52661 13.9173 2.52737 12.0227C2.52959 6.30402 6.86037 1.97335 12.1833 1.97335C14.7789 1.97446 17.2123 3.01735 19.0411 4.84802C20.8711 6.67869 21.9122 9.11335 21.9111 11.7093C21.9089 17.428 17.5781 21.7227 12.1789 21.7227ZM17.6661 14.0493C17.3661 13.8987 15.8923 13.1773 15.6167 13.0773C15.3411 12.9773 15.1411 12.928 14.9411 13.228C14.7411 13.528 14.1745 14.1987 13.9989 14.3987C13.8245 14.5987 13.6489 14.6227 13.3489 14.472C13.0489 14.3213 12.0545 14.0013 10.8789 12.9613C9.96037 12.1547 9.34396 11.1613 9.16948 10.8613C8.99501 10.5613 9.15057 10.4 9.29948 10.2507C9.43392 10.1173 9.59837 9.90135 9.74837 9.72802C9.89837 9.55469 9.94837 9.42802 10.0484 9.22802C10.1484 9.02802 10.0984 8.85469 10.0234 8.70402C9.94837 8.55335 9.33392 7.07869 9.08392 6.47869C8.84059 5.89335 8.59392 5.97335 8.41059 5.96402C8.23613 5.95469 8.03613 5.95469 7.83613 5.95469C7.63613 5.95469 7.31059 6.02969 7.03503 6.32969C6.75948 6.62969 5.98392 7.35202 5.98392 8.82669C5.98392 10.3013 7.05948 11.7267 7.20948 11.9267C7.35948 12.1267 9.33281 15.1267 12.3161 16.4013C13.0328 16.7013 13.5917 16.8773 14.0328 17.0107C14.7661 17.2347 15.4328 17.2013 15.9661 17.1253C16.5661 17.04 17.7661 16.4013 18.0161 15.7013C18.2661 15.0013 18.2661 14.4013 18.1911 14.2773C18.1161 14.1533 17.9161 14.0773 17.6161 13.9267L17.6661 14.0493Z"
-                          ></path>
-                        </svg>
+                    <div>
+                      <div class="text-sm text-gray-500 font-medium">
+                        Call Us
                       </div>
-                      <div>
-                        <div class="text-sm text-gray-500 font-medium">
-                          WhatsApp
-                        </div>
-                        <a
-                          href="https://wa.me/971552108850"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          class="text-[#c69832] font-bold <span class="text-lg" aria-hidden="true">🇦🇪</span> hover:underline flex items-center"
-                          >+971 55 210 8850<svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="ml-1"
-                          >
-                            <path
-                              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                            ></path>
-                            <polyline points="15 3 21 3 21 9"></polyline>
-                            <line x1="10" y1="14" x2="21" y2="3"></line></svg
-                        ></a>
-                      </div>
+                      <a href="tel:+971552108850" class="text-[#c69832] font-bold text-lg hover:underline">+971 55 210
+                        8850</a>
+
                     </div>
                   </div>
-                  <div
-                    class="mt-8 bg-gray-50 p-4 rounded-lg border border-gray-100"
-                  >
-                    <div class="flex items-center">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="text-[#c69832] mr-2"
-                      >
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" y1="8" x2="12" y2="12"></line>
-                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  <div class="flex items-center p-4 bg-green-50 rounded-lg transition-all hover:bg-green-100">
+                    <div class="bg-[#c69832] p-3 rounded-full text-white mr-4 shadow-sm">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                        fill="currentColor" class="">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M20.4539 3.54523C18.2266 1.31736 15.2953 0.0689087 12.1789 0.0666792C5.8066 0.0666792 0.622928 5.24935 0.620699 11.6227C0.620014 13.6827 1.15635 15.6893 2.18463 17.4493L0.52002 23.9333L7.15463 22.3013C8.84945 23.2333 10.7947 23.7267 12.7746 23.728H12.78C19.1512 23.728 24.336 18.544 24.3382 12.1707C24.3405 9.06469 23.0955 6.13202 20.8661 3.90402L20.4539 3.54523ZM12.1789 21.7227H12.1746C10.4 21.7227 8.66037 21.2493 7.14396 20.3613L6.7861 20.1547L3.2661 21.1333L4.26037 17.7067L4.03037 17.3333C3.05214 15.7587 2.52661 13.9173 2.52737 12.0227C2.52959 6.30402 6.86037 1.97335 12.1833 1.97335C14.7789 1.97446 17.2123 3.01735 19.0411 4.84802C20.8711 6.67869 21.9122 9.11335 21.9111 11.7093C21.9089 17.428 17.5781 21.7227 12.1789 21.7227ZM17.6661 14.0493C17.3661 13.8987 15.8923 13.1773 15.6167 13.0773C15.3411 12.9773 15.1411 12.928 14.9411 13.228C14.7411 13.528 14.1745 14.1987 13.9989 14.3987C13.8245 14.5987 13.6489 14.6227 13.3489 14.472C13.0489 14.3213 12.0545 14.0013 10.8789 12.9613C9.96037 12.1547 9.34396 11.1613 9.16948 10.8613C8.99501 10.5613 9.15057 10.4 9.29948 10.2507C9.43392 10.1173 9.59837 9.90135 9.74837 9.72802C9.89837 9.55469 9.94837 9.42802 10.0484 9.22802C10.1484 9.02802 10.0984 8.85469 10.0234 8.70402C9.94837 8.55335 9.33392 7.07869 9.08392 6.47869C8.84059 5.89335 8.59392 5.97335 8.41059 5.96402C8.23613 5.95469 8.03613 5.95469 7.83613 5.95469C7.63613 5.95469 7.31059 6.02969 7.03503 6.32969C6.75948 6.62969 5.98392 7.35202 5.98392 8.82669C5.98392 10.3013 7.05948 11.7267 7.20948 11.9267C7.35948 12.1267 9.33281 15.1267 12.3161 16.4013C13.0328 16.7013 13.5917 16.8773 14.0328 17.0107C14.7661 17.2347 15.4328 17.2013 15.9661 17.1253C16.5661 17.04 17.7661 16.4013 18.0161 15.7013C18.2661 15.0013 18.2661 14.4013 18.1911 14.2773C18.1161 14.1533 17.9161 14.0773 17.6161 13.9267L17.6661 14.0493Z">
+                        </path>
                       </svg>
-                      <p class="text-sm text-gray-600">
-                        Our sales team is available to assist you with any
-                        inquiries about Azizi Milan.
-                      </p>
                     </div>
+                    <div>
+                      <div class="text-sm text-gray-500 font-medium">
+                        WhatsApp
+                      </div>
+                      <a href="https://wa.me/971552108850" target="_blank" rel="noopener noreferrer"
+                        class="text-[#c69832] font-bold <span class=" text-lg" aria-hidden="true">🇦🇪</span>
+                        hover:underline flex items-center"
+                        >+971 55 210 8850<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" class="ml-1">
+                          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                          <polyline points="15 3 21 3 21 9"></polyline>
+                          <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-8 bg-gray-50 p-4 rounded-lg border border-gray-100">
+                  <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="text-[#c69832] mr-2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="8" x2="12" y2="12"></line>
+                      <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <p class="text-sm text-gray-600">
+                      Our sales team is available to assist you with any
+                      inquiries about Azizi Milan.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </main>
-      
-      <div
-        class="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50"
-      >
-        <div class="flex items-center justify-between">
-          <a
-            href="tel:+971552108850"
-            class="flex-1 py-4 flex flex-col items-center justify-center text-[#c69832] border-r border-gray-200"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-phone"
-            >
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-              ></path></svg
-            ><span class="text-sm mt-1">Call</span></a
-          ><a
-            href="https://wa.me/971552108850"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex-1 py-4 flex flex-col items-center justify-center text-[#c69832]"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class=""
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M20.4539 3.54523C18.2266 1.31736 15.2953 0.0689087 12.1789 0.0666792C5.8066 0.0666792 0.622928 5.24935 0.620699 11.6227C0.620014 13.6827 1.15635 15.6893 2.18463 17.4493L0.52002 23.9333L7.15463 22.3013C8.84945 23.2333 10.7947 23.7267 12.7746 23.728H12.78C19.1512 23.728 24.336 18.544 24.3382 12.1707C24.3405 9.06469 23.0955 6.13202 20.8661 3.90402L20.4539 3.54523ZM12.1789 21.7227H12.1746C10.4 21.7227 8.66037 21.2493 7.14396 20.3613L6.7861 20.1547L3.2661 21.1333L4.26037 17.7067L4.03037 17.3333C3.05214 15.7587 2.52661 13.9173 2.52737 12.0227C2.52959 6.30402 6.86037 1.97335 12.1833 1.97335C14.7789 1.97446 17.2123 3.01735 19.0411 4.84802C20.8711 6.67869 21.9122 9.11335 21.9111 11.7093C21.9089 17.428 17.5781 21.7227 12.1789 21.7227ZM17.6661 14.0493C17.3661 13.8987 15.8923 13.1773 15.6167 13.0773C15.3411 12.9773 15.1411 12.928 14.9411 13.228C14.7411 13.528 14.1745 14.1987 13.9989 14.3987C13.8245 14.5987 13.6489 14.6227 13.3489 14.472C13.0489 14.3213 12.0545 14.0013 10.8789 12.9613C9.96037 12.1547 9.34396 11.1613 9.16948 10.8613C8.99501 10.5613 9.15057 10.4 9.29948 10.2507C9.43392 10.1173 9.59837 9.90135 9.74837 9.72802C9.89837 9.55469 9.94837 9.42802 10.0484 9.22802C10.1484 9.02802 10.0984 8.85469 10.0234 8.70402C9.94837 8.55335 9.33392 7.07869 9.08392 6.47869C8.84059 5.89335 8.59392 5.97335 8.41059 5.96402C8.23613 5.95469 8.03613 5.95469 7.83613 5.95469C7.63613 5.95469 7.31059 6.02969 7.03503 6.32969C6.75948 6.62969 5.98392 7.35202 5.98392 8.82669C5.98392 10.3013 7.05948 11.7267 7.20948 11.9267C7.35948 12.1267 9.33281 15.1267 12.3161 16.4013C13.0328 16.7013 13.5917 16.8773 14.0328 17.0107C14.7661 17.2347 15.4328 17.2013 15.9661 17.1253C16.5661 17.04 17.7661 16.4013 18.0161 15.7013C18.2661 15.0013 18.2661 14.4013 18.1911 14.2773C18.1161 14.1533 17.9161 14.0773 17.6161 13.9267L17.6661 14.0493Z"
-              ></path></svg
-            ><span class="text-sm mt-1">WhatsApp</span></a
-          >
         </div>
-      </div>
-      <a
-        href="https://wa.me/971552108850"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="hidden md:flex fixed bottom-8 right-8 z-50 items-center gap-2 bg-[#c69832] text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-        tabindex="0"
-        style="opacity: 0; transform: scale(0.8)"
-        ><svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          class=""
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M20.4539 3.54523C18.2266 1.31736 15.2953 0.0689087 12.1789 0.0666792C5.8066 0.0666792 0.622928 5.24935 0.620699 11.6227C0.620014 13.6827 1.15635 15.6893 2.18463 17.4493L0.52002 23.9333L7.15463 22.3013C8.84945 23.2333 10.7947 23.7267 12.7746 23.728H12.78C19.1512 23.728 24.336 18.544 24.3382 12.1707C24.3405 9.06469 23.0955 6.13202 20.8661 3.90402L20.4539 3.54523ZM12.1789 21.7227H12.1746C10.4 21.7227 8.66037 21.2493 7.14396 20.3613L6.7861 20.1547L3.2661 21.1333L4.26037 17.7067L4.03037 17.3333C3.05214 15.7587 2.52661 13.9173 2.52737 12.0227C2.52959 6.30402 6.86037 1.97335 12.1833 1.97335C14.7789 1.97446 17.2123 3.01735 19.0411 4.84802C20.8711 6.67869 21.9122 9.11335 21.9111 11.7093C21.9089 17.428 17.5781 21.7227 12.1789 21.7227ZM17.6661 14.0493C17.3661 13.8987 15.8923 13.1773 15.6167 13.0773C15.3411 12.9773 15.1411 12.928 14.9411 13.228C14.7411 13.528 14.1745 14.1987 13.9989 14.3987C13.8245 14.5987 13.6489 14.6227 13.3489 14.472C13.0489 14.3213 12.0545 14.0013 10.8789 12.9613C9.96037 12.1547 9.34396 11.1613 9.16948 10.8613C8.99501 10.5613 9.15057 10.4 9.29948 10.2507C9.43392 10.1173 9.59837 9.90135 9.74837 9.72802C9.89837 9.55469 9.94837 9.42802 10.0484 9.22802C10.1484 9.02802 10.0984 8.85469 10.0234 8.70402C9.94837 8.55335 9.33392 7.07869 9.08392 6.47869C8.84059 5.89335 8.59392 5.97335 8.41059 5.96402C8.23613 5.95469 8.03613 5.95469 7.83613 5.95469C7.63613 5.95469 7.31059 6.02969 7.03503 6.32969C6.75948 6.62969 5.98392 7.35202 5.98392 8.82669C5.98392 10.3013 7.05948 11.7267 7.20948 11.9267C7.35948 12.1267 9.33281 15.1267 12.3161 16.4013C13.0328 16.7013 13.5917 16.8773 14.0328 17.0107C14.7661 17.2347 15.4328 17.2013 15.9661 17.1253C16.5661 17.04 17.7661 16.4013 18.0161 15.7013C18.2661 15.0013 18.2661 14.4013 18.1911 14.2773C18.1161 14.1533 17.9161 14.0773 17.6161 13.9267L17.6661 14.0493Z"
-          ></path></svg
-        ><span class="font-medium">WhatsApp</span></a
-      >
-    </div>
-    <script
-      src="/_next/static/chunks/webpack-7cf70abcc4fe1442.js"
-      async=""
-    ></script>
-    <script>
-      (self.__next_f = self.__next_f || []).push([0]);
-    </script>
-    <script>
-      self.__next_f.push([
-        1,
-        '1:"$Sreact.fragment"\n2:I[690,["177","static/chunks/app/layout-e7fbf483a8e503fe.js"],"ThemeProvider"]\n3:I[6012,[],""]\n4:I[3690,[],""]\n6:I[6236,[],"OutletBoundary"]\n9:I[6236,[],"ViewportBoundary"]\nb:I[6236,[],"MetadataBoundary"]\nd:I[2691,[],""]\n:HL["/_next/static/css/c3d5c7e1318352c4.css","style"]\n',
-      ]);
-    </script>
-    <script>
-      self.__next_f.push([
-        1,
-        '0:{"P":null,"b":"X7NXLHUgbEAcbd9C8nt11","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c3d5c7e1318352c4.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","dir":"ltr","children":["$","body",null,{"children":["$","$L2",null,{"attribute":"class","defaultTheme":"light","enableSystem":true,"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\\"Segoe UI\\",Roboto,Helvetica,Arial,sans-serif,\\"Apple Color Emoji\\",\\"Segoe UI Emoji\\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5","$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","ZIV2MxlXPVH4TElnyD7Rp",{"children":[["$","$L9",null,{"children":"$La"}],null]}],["$","$Lb",null,{"children":"$Lc"}]]}],false]],"m":"$undefined","G":["$d","$undefined"],"s":false,"S":true}\n',
-      ]);
-    </script>
-    <script>
-      self.__next_f.push([
-        1,
-        'e:I[2635,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"Header"]\nf:I[7461,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"HeroSection"]\n10:I[3017,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"PropertyDetails"]\n11:I[6697,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"PaymentPlan"]\n12:I[4215,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"Gallery"]\n13:I[9586,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"Location"]\n14:I[6964,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"DeveloperInfo"]\n15:I[6394,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"ContactSection"]\n16:I[7352,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"MobileActionButtons"]\n17:I[6349,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chun',
-      ]);
-    </script>
-    <script>
-      self.__next_f.push([
-        1,
-        'ks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"DesktopWhatsAppButton"]\n',
-      ]);
-    </script>
-    <script>
-      self.__next_f.push([
-        1,
-        '5:["$","div",null,{"className":"min-h-screen bg-white","children":[["$","$Le",null,{"dictionary":{"meta":{"title":"Azizi Milan Dubai - Luxury Redefined","description":"Experience luxury living at Azizi Milan in City of Arabia, Dubai\'s most prestigious location."},"header":{"overview":"Overview","gallery":"Gallery","location":"Location","developer":"The Developer","contact":"Contact","signUp":"Contact Us","callUs":"Call Us"},"hero":{"newLaunch":"New Launch in City of Arabia","title":"Azizi Milan","subtitle":"Luxury Redefined","description":"Experience unparalleled luxury living in Dubai\'s most prestigious location with Italian-inspired design and premium amenities.","signUp":"Contact Us","discoverMore":"Discover More","scrollDown":"Scroll Down","bedrooms":"Bedrooms","startingPrice":"Starting Price","completion":"Completion","paymentPlan":"Payment Plan"},"propertyDetails":{"title":"Azizi Milan at City of Arabia","subtitle":"Experience the epitome of luxury living in Dubai\'s most prestigious location.","luxuryStandard":"A New Standard of Luxury","description":"Azizi Milan at City of Arabia represents a new architectural gem in Dubai which unites Italian elements with UAE contemporary spirit. The community development is integrated through multiple planned high-rise buildings with 25 to 24-storey sized with immersive five-star amenities.","startingPrice":"Starting Price","handover":"Handover","paymentPlan":"Payment Plan","downPayment":"Down Payment","features":{"premiumFinishes":"Premium Finishes","smartHome":"Smart Home Technology","windows":"Floor-to-ceiling Windows","design":"Italian-inspired Design"},"strategicLocation":{"title":"Strategic Location","description":"Located in the heart of City of Arabia, with easy access to major highways and attractions."},"luxuryLifestyle":{"title":"Luxury Lifestyle","description":"Experience a lifestyle of unparalleled luxury with premium amenities and services."},"investmentOpportunity":{"title":"Investment Opportunity","description":"A prime investment opportunity in one of Dubai\'s fastest-growing communities."}},"paymentPlan":{"title":"Payment Plan","subtitle":"Flexible payment options designed to make your investment journey smooth and convenient.","downPayment":{"title":"Down Payment","subtitle":"On Booking Date"},"duringConstruction":{"title":"During Construction","subtitle":"1st to 5th Installment"},"onHandover":{"title":"On Handover","subtitle":"100% Completion"}},"gallery":{"title":"Gallery","subtitle":"Explore the stunning architecture and surroundings of Azizi Milan at City of Arabia through our gallery."},"location":{"title":"Prime Location","subtitle":"Strategically located in City of Arabia, Dubailand, Azizi Milan offers unparalleled connectivity to Dubai\'s key destinations.","connectivity":"Connectivity \u0026 Proximity","downtown":"Downtown Dubai","marina":"Dubai Marina","airport":"Dubai International Airport","metro":"Dubai Metro Station"},"developer":{"title":"About the Developer","subtitle":"Azizi Developments is one of the leading private developers in the UAE.","name":"Azizi Developments","description":"Azizi Developments is a leading private developer in Dubai, UAE. With thousands of homes successfully delivered to satisfied residents from around the world, the developer prides itself on its extensive portfolio of modern luxury developments across Dubai\'s most sought-after residential destinations.","features":{"projects":"Over 100 projects completed across Dubai","units":"More than 12,000 units delivered","designs":"Award-winning architectural designs","quality":"Commitment to quality and timely delivery"}},"contact":{"title":"Contact Us","subtitle":"Interested in Azizi Milan? Get in touch with our sales team for more information.","requestInfo":"Request Information","fullName":"Full Name","phoneNumber":"Phone Number","unitType":"Unit Type","selectUnitType":"Select unit type","studio":"Studio","oneBedroom":"1 Bedroom Apartment","twoBedroom":"2 Bedroom Apartment","threeBedroom":"3 Bedroom Apartment","submit":"Contact Us","submitting":"Submitting...","contactInfo":"Contact Information","callUs":"Call Us","whatsApp":"WhatsApp","salesTeam":"Our sales team is available to assist you with any inquiries about Azizi Milan."},"thankYou":{"title":"Thank You!","message":"Your inquiry has been submitted successfully. Our sales team will contact you shortly about Azizi Milan.","returnHome":"Return to Home","callUs":"Call Us"},"common":{"minutes":"minutes"},"language":{"en":"English","ar":"العربية"}},"lang":"en"}],["$","main",null,{"children":[["$","$Lf",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L10",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L11",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L12",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L13",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L14",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L15",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}]]}],["$","$L16",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L17",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}]]}]\n',
-      ]);
-    </script>
-    <script>
-      self.__next_f.push([
-        1,
-        'a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]\n7:null\n',
-      ]);
-    </script>
-    <script>
-      self.__next_f.push([
-        1,
-        '8:null\nc:[["$","title","0",{"children":"Azizi Milan Dubai - Luxury Redefined"}],["$","meta","1",{"name":"description","content":"Experience luxury living at Azizi Milan in City of Arabia, Dubai\'s most prestigious location."}],["$","meta","2",{"name":"generator","content":"v0.dev"}],["$","link","3",{"rel":"icon","href":"/favicon.ico"}]]\n',
-      ]);
-    </script>
+      </section>
+    </main>
 
-  </body>
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg z-50">
+      <div class="flex items-center justify-between">
+        <a href="tel:+971552108850"
+          class="flex-1 py-4 flex flex-col items-center justify-center text-[#c69832] border-r border-gray-200"><svg
+            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-phone">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg><span class="text-sm mt-1">Call</span></a><a href="https://wa.me/971552108850" target="_blank"
+          rel="noopener noreferrer" class="flex-1 py-4 flex flex-col items-center justify-center text-[#c69832]"><svg
+            xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M20.4539 3.54523C18.2266 1.31736 15.2953 0.0689087 12.1789 0.0666792C5.8066 0.0666792 0.622928 5.24935 0.620699 11.6227C0.620014 13.6827 1.15635 15.6893 2.18463 17.4493L0.52002 23.9333L7.15463 22.3013C8.84945 23.2333 10.7947 23.7267 12.7746 23.728H12.78C19.1512 23.728 24.336 18.544 24.3382 12.1707C24.3405 9.06469 23.0955 6.13202 20.8661 3.90402L20.4539 3.54523ZM12.1789 21.7227H12.1746C10.4 21.7227 8.66037 21.2493 7.14396 20.3613L6.7861 20.1547L3.2661 21.1333L4.26037 17.7067L4.03037 17.3333C3.05214 15.7587 2.52661 13.9173 2.52737 12.0227C2.52959 6.30402 6.86037 1.97335 12.1833 1.97335C14.7789 1.97446 17.2123 3.01735 19.0411 4.84802C20.8711 6.67869 21.9122 9.11335 21.9111 11.7093C21.9089 17.428 17.5781 21.7227 12.1789 21.7227ZM17.6661 14.0493C17.3661 13.8987 15.8923 13.1773 15.6167 13.0773C15.3411 12.9773 15.1411 12.928 14.9411 13.228C14.7411 13.528 14.1745 14.1987 13.9989 14.3987C13.8245 14.5987 13.6489 14.6227 13.3489 14.472C13.0489 14.3213 12.0545 14.0013 10.8789 12.9613C9.96037 12.1547 9.34396 11.1613 9.16948 10.8613C8.99501 10.5613 9.15057 10.4 9.29948 10.2507C9.43392 10.1173 9.59837 9.90135 9.74837 9.72802C9.89837 9.55469 9.94837 9.42802 10.0484 9.22802C10.1484 9.02802 10.0984 8.85469 10.0234 8.70402C9.94837 8.55335 9.33392 7.07869 9.08392 6.47869C8.84059 5.89335 8.59392 5.97335 8.41059 5.96402C8.23613 5.95469 8.03613 5.95469 7.83613 5.95469C7.63613 5.95469 7.31059 6.02969 7.03503 6.32969C6.75948 6.62969 5.98392 7.35202 5.98392 8.82669C5.98392 10.3013 7.05948 11.7267 7.20948 11.9267C7.35948 12.1267 9.33281 15.1267 12.3161 16.4013C13.0328 16.7013 13.5917 16.8773 14.0328 17.0107C14.7661 17.2347 15.4328 17.2013 15.9661 17.1253C16.5661 17.04 17.7661 16.4013 18.0161 15.7013C18.2661 15.0013 18.2661 14.4013 18.1911 14.2773C18.1161 14.1533 17.9161 14.0773 17.6161 13.9267L17.6661 14.0493Z">
+            </path>
+          </svg><span class="text-sm mt-1">WhatsApp</span></a>
+      </div>
+    </div>
+    <a href="https://wa.me/971552108850" target="_blank" rel="noopener noreferrer"
+      class="hidden md:flex fixed bottom-8 right-8 z-50 items-center gap-2 bg-[#c69832] text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+      tabindex="0" style="opacity: 0; transform: scale(0.8)"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+        height="20" viewBox="0 0 24 24" fill="currentColor" class="">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M20.4539 3.54523C18.2266 1.31736 15.2953 0.0689087 12.1789 0.0666792C5.8066 0.0666792 0.622928 5.24935 0.620699 11.6227C0.620014 13.6827 1.15635 15.6893 2.18463 17.4493L0.52002 23.9333L7.15463 22.3013C8.84945 23.2333 10.7947 23.7267 12.7746 23.728H12.78C19.1512 23.728 24.336 18.544 24.3382 12.1707C24.3405 9.06469 23.0955 6.13202 20.8661 3.90402L20.4539 3.54523ZM12.1789 21.7227H12.1746C10.4 21.7227 8.66037 21.2493 7.14396 20.3613L6.7861 20.1547L3.2661 21.1333L4.26037 17.7067L4.03037 17.3333C3.05214 15.7587 2.52661 13.9173 2.52737 12.0227C2.52959 6.30402 6.86037 1.97335 12.1833 1.97335C14.7789 1.97446 17.2123 3.01735 19.0411 4.84802C20.8711 6.67869 21.9122 9.11335 21.9111 11.7093C21.9089 17.428 17.5781 21.7227 12.1789 21.7227ZM17.6661 14.0493C17.3661 13.8987 15.8923 13.1773 15.6167 13.0773C15.3411 12.9773 15.1411 12.928 14.9411 13.228C14.7411 13.528 14.1745 14.1987 13.9989 14.3987C13.8245 14.5987 13.6489 14.6227 13.3489 14.472C13.0489 14.3213 12.0545 14.0013 10.8789 12.9613C9.96037 12.1547 9.34396 11.1613 9.16948 10.8613C8.99501 10.5613 9.15057 10.4 9.29948 10.2507C9.43392 10.1173 9.59837 9.90135 9.74837 9.72802C9.89837 9.55469 9.94837 9.42802 10.0484 9.22802C10.1484 9.02802 10.0984 8.85469 10.0234 8.70402C9.94837 8.55335 9.33392 7.07869 9.08392 6.47869C8.84059 5.89335 8.59392 5.97335 8.41059 5.96402C8.23613 5.95469 8.03613 5.95469 7.83613 5.95469C7.63613 5.95469 7.31059 6.02969 7.03503 6.32969C6.75948 6.62969 5.98392 7.35202 5.98392 8.82669C5.98392 10.3013 7.05948 11.7267 7.20948 11.9267C7.35948 12.1267 9.33281 15.1267 12.3161 16.4013C13.0328 16.7013 13.5917 16.8773 14.0328 17.0107C14.7661 17.2347 15.4328 17.2013 15.9661 17.1253C16.5661 17.04 17.7661 16.4013 18.0161 15.7013C18.2661 15.0013 18.2661 14.4013 18.1911 14.2773C18.1161 14.1533 17.9161 14.0773 17.6161 13.9267L17.6661 14.0493Z">
+        </path>
+      </svg><span class="font-medium">WhatsApp</span></a>
+  </div>
+  <script src="/_next/static/chunks/webpack-7cf70abcc4fe1442.js" async=""></script>
+  <script>
+    (self.__next_f = self.__next_f || []).push([0]);
+  </script>
+  <script>
+    self.__next_f.push([
+      1,
+      '1:"$Sreact.fragment"\n2:I[690,["177","static/chunks/app/layout-e7fbf483a8e503fe.js"],"ThemeProvider"]\n3:I[6012,[],""]\n4:I[3690,[],""]\n6:I[6236,[],"OutletBoundary"]\n9:I[6236,[],"ViewportBoundary"]\nb:I[6236,[],"MetadataBoundary"]\nd:I[2691,[],""]\n:HL["/_next/static/css/c3d5c7e1318352c4.css","style"]\n',
+    ]);
+  </script>
+  <script>
+    self.__next_f.push([
+      1,
+      '0:{"P":null,"b":"X7NXLHUgbEAcbd9C8nt11","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c3d5c7e1318352c4.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","dir":"ltr","children":["$","body",null,{"children":["$","$L2",null,{"attribute":"class","defaultTheme":"light","enableSystem":true,"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\\"Segoe UI\\",Roboto,Helvetica,Arial,sans-serif,\\"Apple Color Emoji\\",\\"Segoe UI Emoji\\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5","$undefined",null,["$","$L6",null,{"children":["$L7","$L8",null]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","ZIV2MxlXPVH4TElnyD7Rp",{"children":[["$","$L9",null,{"children":"$La"}],null]}],["$","$Lb",null,{"children":"$Lc"}]]}],false]],"m":"$undefined","G":["$d","$undefined"],"s":false,"S":true}\n',
+    ]);
+  </script>
+  <script>
+    self.__next_f.push([
+      1,
+      'e:I[2635,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"Header"]\nf:I[7461,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"HeroSection"]\n10:I[3017,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"PropertyDetails"]\n11:I[6697,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"PaymentPlan"]\n12:I[4215,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"Gallery"]\n13:I[9586,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"Location"]\n14:I[6964,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"DeveloperInfo"]\n15:I[6394,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"ContactSection"]\n16:I[7352,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chunks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"MobileActionButtons"]\n17:I[6349,["61","static/chunks/61-921f5beb7dd79a0f.js","197","static/chunks/197-45d9cf1637f3ea6e.js","765","static/chun',
+    ]);
+  </script>
+  <script>
+    self.__next_f.push([
+      1,
+      'ks/765-de0bf0528eead3ac.js","974","static/chunks/app/page-cb9da240176ba07f.js"],"DesktopWhatsAppButton"]\n',
+    ]);
+  </script>
+  <script>
+    self.__next_f.push([
+      1,
+      '5:["$","div",null,{"className":"min-h-screen bg-white","children":[["$","$Le",null,{"dictionary":{"meta":{"title":"Azizi Milan Dubai - Luxury Redefined","description":"Experience luxury living at Azizi Milan in City of Arabia, Dubai\'s most prestigious location."},"header":{"overview":"Overview","gallery":"Gallery","location":"Location","developer":"The Developer","contact":"Contact","signUp":"Contact Us","callUs":"Call Us"},"hero":{"newLaunch":"New Launch in City of Arabia","title":"Azizi Milan","subtitle":"Luxury Redefined","description":"Experience unparalleled luxury living in Dubai\'s most prestigious location with Italian-inspired design and premium amenities.","signUp":"Contact Us","discoverMore":"Discover More","scrollDown":"Scroll Down","bedrooms":"Bedrooms","startingPrice":"Starting Price","completion":"Completion","paymentPlan":"Payment Plan"},"propertyDetails":{"title":"Azizi Milan at City of Arabia","subtitle":"Experience the epitome of luxury living in Dubai\'s most prestigious location.","luxuryStandard":"A New Standard of Luxury","description":"Azizi Milan at City of Arabia represents a new architectural gem in Dubai which unites Italian elements with UAE contemporary spirit. The community development is integrated through multiple planned high-rise buildings with 25 to 24-storey sized with immersive five-star amenities.","startingPrice":"Starting Price","handover":"Handover","paymentPlan":"Payment Plan","downPayment":"Down Payment","features":{"premiumFinishes":"Premium Finishes","smartHome":"Smart Home Technology","windows":"Floor-to-ceiling Windows","design":"Italian-inspired Design"},"strategicLocation":{"title":"Strategic Location","description":"Located in the heart of City of Arabia, with easy access to major highways and attractions."},"luxuryLifestyle":{"title":"Luxury Lifestyle","description":"Experience a lifestyle of unparalleled luxury with premium amenities and services."},"investmentOpportunity":{"title":"Investment Opportunity","description":"A prime investment opportunity in one of Dubai\'s fastest-growing communities."}},"paymentPlan":{"title":"Payment Plan","subtitle":"Flexible payment options designed to make your investment journey smooth and convenient.","downPayment":{"title":"Down Payment","subtitle":"On Booking Date"},"duringConstruction":{"title":"During Construction","subtitle":"1st to 5th Installment"},"onHandover":{"title":"On Handover","subtitle":"100% Completion"}},"gallery":{"title":"Gallery","subtitle":"Explore the stunning architecture and surroundings of Azizi Milan at City of Arabia through our gallery."},"location":{"title":"Prime Location","subtitle":"Strategically located in City of Arabia, Dubailand, Azizi Milan offers unparalleled connectivity to Dubai\'s key destinations.","connectivity":"Connectivity \u0026 Proximity","downtown":"Downtown Dubai","marina":"Dubai Marina","airport":"Dubai International Airport","metro":"Dubai Metro Station"},"developer":{"title":"About the Developer","subtitle":"Azizi Developments is one of the leading private developers in the UAE.","name":"Azizi Developments","description":"Azizi Developments is a leading private developer in Dubai, UAE. With thousands of homes successfully delivered to satisfied residents from around the world, the developer prides itself on its extensive portfolio of modern luxury developments across Dubai\'s most sought-after residential destinations.","features":{"projects":"Over 100 projects completed across Dubai","units":"More than 12,000 units delivered","designs":"Award-winning architectural designs","quality":"Commitment to quality and timely delivery"}},"contact":{"title":"Contact Us","subtitle":"Interested in Azizi Milan? Get in touch with our sales team for more information.","requestInfo":"Request Information","fullName":"Full Name","phoneNumber":"Phone Number","unitType":"Unit Type","selectUnitType":"Select unit type","studio":"Studio","oneBedroom":"1 Bedroom Apartment","twoBedroom":"2 Bedroom Apartment","threeBedroom":"3 Bedroom Apartment","submit":"Contact Us","submitting":"Submitting...","contactInfo":"Contact Information","callUs":"Call Us","whatsApp":"WhatsApp","salesTeam":"Our sales team is available to assist you with any inquiries about Azizi Milan."},"thankYou":{"title":"Thank You!","message":"Your inquiry has been submitted successfully. Our sales team will contact you shortly about Azizi Milan.","returnHome":"Return to Home","callUs":"Call Us"},"common":{"minutes":"minutes"},"language":{"en":"English","ar":"العربية"}},"lang":"en"}],["$","main",null,{"children":[["$","$Lf",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L10",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L11",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L12",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L13",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L14",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L15",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}]]}],["$","$L16",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}],["$","$L17",null,{"dictionary":"$5:props:children:0:props:dictionary","lang":"en"}]]}]\n',
+    ]);
+  </script>
+  <script>
+    self.__next_f.push([
+      1,
+      'a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]\n7:null\n',
+    ]);
+  </script>
+  <script>
+    self.__next_f.push([
+      1,
+      '8:null\nc:[["$","title","0",{"children":"Azizi Milan Dubai - Luxury Redefined"}],["$","meta","1",{"name":"description","content":"Experience luxury living at Azizi Milan in City of Arabia, Dubai\'s most prestigious location."}],["$","meta","2",{"name":"generator","content":"v0.dev"}],["$","link","3",{"rel":"icon","href":"/favicon.ico"}]]\n',
+    ]);
+  </script>
+
+</body>
 
 </html>
