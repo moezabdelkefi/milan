@@ -942,108 +942,73 @@
               " src="/city-of-arabia-sunset.webp" />
           <div class="absolute inset-0 bg-black/60"></div>
         </div>
-        <div class="container mx-auto px-6 relative z-10">
-          <div class="text-center mb-12" style="opacity: 0; transform: translateY(20px)">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Contact Us
-            </h2>
-            <p class="text-gray-200 max-w-3xl mx-auto">
-              Interested in Azizi Milan? Get in touch with our sales team for
-              more information.
-            </p>
-          </div>
-          <div class="grid md:grid-cols-2 gap-8 items-start">
-            <div class="bg-white p-8 rounded-xl shadow-sm" style="opacity: 0; transform: translateX(-20px)">
-              <form id="contact-form" class="space-y-6">
-                <h3 class="text-xl font-bold mb-4">Request Information</h3>
-                <div class="space-y-2">
-                  <label for="fullName" class="text-sm font-medium">Full Name<!-- -->*</label><input
-                    class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                    id="fullName" placeholder="Full Name" required="" name="fullName" />
-                </div>
-                <div class="space-y-2">
-                  <label for="phone" class="text-sm font-medium">Phone Number<!-- -->*</label>
-                  <div class="flex gap-2">
-                    <button type="button" role="combobox" aria-controls="radix-«R6edehtb»" aria-expanded="false"
-                      aria-autocomplete="none" dir="ltr" data-state="closed"
-                      class="flex h-10 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&amp;&gt;span]:line-clamp-1 w-[110px] flex-shrink-0">
-                      <span style="pointer-events: none"></span><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-down h-4 w-4 opacity-50" aria-hidden="true">
-                        <path d="m6 9 6 6 6-6"></path>
-                      </svg></button><select aria-hidden="true" tabindex="-1" style="
-                          position: absolute;
-                          border: 0;
-                          width: 1px;
-                          height: 1px;
-                          padding: 0;
-                          margin: -1px;
-                          overflow: hidden;
-                          clip: rect(0, 0, 0, 0);
-                          white-space: nowrap;
-                          word-wrap: normal;
-                        "></select><input
-                      class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm flex-grow"
-                      id="phone" placeholder="58 983 0055" required="" name="phone" />
-                  </div>
-                </div>
-                <div class="space-y-2">
-                  <label for="unitType" class="text-sm font-medium">Unit Type<!-- -->*</label><button type="button"
-                    role="combobox" aria-controls="radix-«R2idehtb»" aria-expanded="false" aria-required="true"
-                    aria-autocomplete="none" dir="ltr" data-state="closed" data-placeholder=""
-                    class="flex h-10 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&amp;&gt;span]:line-clamp-1 w-full"
-                    id="unitType">
-                    <span style="pointer-events: none">Select unit type</span><svg xmlns="http://www.w3.org/2000/svg"
-                      width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round"
-                      class="lucide lucide-chevron-down h-4 w-4 opacity-50" aria-hidden="true">
-                      <path d="m6 9 6 6 6-6"></path>
-                    </svg></button><select aria-hidden="true" required="" tabindex="-1" name="unitType" style="
-                        position: absolute;
-                        border: 0;
-                        width: 1px;
-                        height: 1px;
-                        padding: 0;
-                        margin: -1px;
-                        overflow: hidden;
-                        clip: rect(0, 0, 0, 0);
-                        white-space: nowrap;
-                        word-wrap: normal;
-                      "></select>
-                </div>
-                <button
-                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 w-full bg-gradient-to-r from-[#c69832] to-[#c69832] hover:from-[#c69832] hover:to-[#c69832] py-2"
-                  type="submit">
-                  Contact Us
-                </button>
-              </form>
-            </div>
-            <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-            <script>
-              // Replace with your actual EmailJS public key, service ID, and template ID
-              const EMAILJS_PUBLIC_KEY = 'oSKl3ghVdj4Zq_UeK';
-              const EMAILJS_SERVICE_ID = 'service_rs2mdeo';
-              const EMAILJS_TEMPLATE_ID = 'template_nxb84jz';
+        <<div class="container mx-auto px-6 relative z-10">
+  <div class="text-center mb-12" style="opacity: 0; transform: translateY(20px)">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+      Contact Us
+    </h2>
+    <p class="text-gray-200 max-w-3xl mx-auto">
+      Interested in Azizi Milan? Get in touch with our sales team for
+      more information.
+    </p>
+  </div>
+  <div class="grid md:grid-cols-2 gap-8 items-start">
+    <div class="bg-white p-8 rounded-xl shadow-sm" style="opacity: 0; transform: translateX(-20px)">
+      <form id="contact-form" class="space-y-6">
+        <h3 class="text-xl font-bold mb-4">Request Information</h3>
+        <div class="space-y-2">
+          <label for="fullName" class="text-sm font-medium">Full Name*</label>
+          <input
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+            id="fullName" placeholder="Full Name" required name="fullName" />
+        </div>
+        <div class="space-y-2">
+          <label for="phone" class="text-sm font-medium">Phone Number*</label>
+          <input
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+            id="phone" placeholder="58 983 0055" required name="phone" />
+        </div>
+        <div class="space-y-2">
+          <label for="unitType" class="text-sm font-medium">Unit Type*</label>
+          <select
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:text-sm"
+            id="unitType" name="unitType" required>
+            <option value="" disabled selected>Select unit type</option>
+            <option value="Studio">Studio</option>
+            <option value="1 Bedroom">1 Bedroom Apartment</option>
+            <option value="2 Bedroom">2 Bedroom Apartment</option>
+            <option value="3 Bedroom">3 Bedroom Apartment</option>
+          </select>
+        </div>
+        <button
+          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 w-full bg-gradient-to-r from-[#c69832] to-[#c69832] hover:from-[#c69832] hover:to-[#c69832] py-2"
+          type="submit">
+          Contact Us
+        </button>
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      const EMAILJS_PUBLIC_KEY = 'oSKl3ghVdj4Zq_UeK';
+      const EMAILJS_SERVICE_ID = 'service_rs2mdeo';
+      const EMAILJS_TEMPLATE_ID = 'template_nxb84jz';
 
-              document.addEventListener('DOMContentLoaded', function () {
-                emailjs.init(EMAILJS_PUBLIC_KEY);
+      document.addEventListener('DOMContentLoaded', function () {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
 
-                document.getElementById('contact-form').addEventListener('submit', function (e) {
-                  e.preventDefault();
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+          e.preventDefault();
 
-                  // Optionally, show a loading indicator here
-
-                  emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
-                    .then(function () {
-                      alert('Thank you! Your inquiry has been submitted.');
-                      document.getElementById('contact-form').reset();
-                    }, function (error) {
-                      alert('Oops! Something went wrong. Please try again.');
-                    });
-                });
-              });
-            </script>
+          emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, this)
+            .then(function () {
+              alert('Thank you! Your inquiry has been submitted.');
+              document.getElementById('contact-form').reset();
+            }, function (error) {
+              alert('Oops! Something went wrong. Please try again.');
+            });
+        });
+      });
+    </script>
             <div class="space-y-8" style="opacity: 0; transform: translateX(20px)">
               <div class="bg-white/90 backdrop-blur-md p-8 rounded-xl shadow-lg border border-gray-100">
                 <h3 class="text-2xl font-bold mb-8 text-[#c69832] flex items-center justify-center">
