@@ -1572,18 +1572,18 @@ body {
 .bg-\[\#c69832\] {
     --tw-bg-opacity: 1;
     /* Fix the invalid background-color syntax */
-background-color: rgb(198 152 50 / var(--tw-bg-opacity, 1));
+    background-color: rgb(198 152 50 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#c69832\]\/90 {
     /* Fix the invalid background-color syntax */
-background-color: rgb(198 152 50 / var(--tw-bg-opacity, 1));
+    background-color: rgb(198 152 50 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#25D366\] {
     --tw-bg-opacity: 1;
     /* Fix the invalid background-color syntax */
-background-color: rgb(198 152 50 / var(--tw-bg-opacity, 1));
+    background-color: rgb(198 152 50 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[--color-bg\] {
@@ -3886,44 +3886,98 @@ background-color: rgb(198 152 50 / var(--tw-bg-opacity, 1));
     cursor: e-resize
 }
 
-.opacity-0 { opacity: 0; }
-.opacity-100 { opacity: 1; }
-.pointer-events-none { pointer-events: none; }
-.scale-95 { transform: scale(0.95); }
-.scale-100 { transform: scale(1); }
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.scale-95 {
+    transform: scale(0.95);
+}
+
+.scale-100 {
+    transform: scale(1);
+}
 
 /* Burger to X animation */
 .burger-btn {
-  width: 44px;
-  height: 44px;
-  position: relative;
-  z-index: 100000;
-  background: transparent;
-  border: none;
+    width: 44px;
+    height: 44px;
+    position: relative;
+    z-index: 100000;
+    background: transparent;
+    border: none;
 }
+
 .burger-btn .bar {
-  display: block;
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  height: 3px;
-  background: #c69832;
-  border-radius: 2px;
-  transition: all 0.3s cubic-bezier(.4,2,.6,1);
+    display: block;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    height: 3px;
+    background: #c69832;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(.4, 2, .6, 1);
 }
-.burger-btn .bar:nth-child(1) { top: 14px; }
-.burger-btn .bar:nth-child(2) { top: 21px; }
-.burger-btn .bar:nth-child(3) { top: 28px; }
+
+.burger-btn .bar:nth-child(1) {
+    top: 14px;
+}
+
+.burger-btn .bar:nth-child(2) {
+    top: 21px;
+}
+
+.burger-btn .bar:nth-child(3) {
+    top: 28px;
+}
 
 .burger-btn.active .bar:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+    transform: translateY(7px) rotate(45deg);
 }
+
 .burger-btn.active .bar:nth-child(2) {
-  opacity: 0;
+    opacity: 0;
 }
+
 .burger-btn.active .bar:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
 }
+
 header {
     isolation: isolate;
+}
+
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+    display: none;
+}
+
+/* Hide Google Translate top banner and overlays */
+.VIpgJd-ZVi9od-ORHb-OEVmcd,
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-te-spinner-pos,
+.goog-te-menu-value,
+.goog-te-gadget-icon,
+.goog-te-banner-frame.skiptranslate,
+body > .skiptranslate {
+    display: none !important;
+}
+
+/* Prevent body from shifting down */
+body {
+    top: 0px !important;
+}
+
+#mobile-menu,
+#mobile-menu-panel {
+  z-index: 999999 !important;
 }
